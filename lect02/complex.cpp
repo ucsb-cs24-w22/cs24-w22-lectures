@@ -70,10 +70,10 @@ public:
 
     }
 
-    // complex operator+(complex& second){
-    //     //implicit object: this
-    //     //second
-    //     return  complex {this->getReal() + second.getReal(), this->getImag() + second.getImag()};
+    // complex operator+(complex& rhs){
+    //   lhs is implicit object: this
+    //  
+    //     return  complex {this->getReal() + rhs.getReal(), this->getImag() + rhs.getImag()};
                
 
     // }
@@ -82,6 +82,8 @@ public:
 
 };
 
+// c6 = c1 + c2;
+// c6 = operator+(c1, c2);
 
 complex operator+(complex& lhs, complex& rhs){
     //implicit object: this
@@ -119,9 +121,9 @@ int main(int argc, char const *argv[])
                         // (1): Calls a constructor
 
     complex c4 {10}; // default value of 0 for imag is used
-    //c1, c2, c3, c4 are on the stack because they are local to main
+    // c1, c2, c3, c4 are on the stack because they are local to main
 
-    complex* c5 = new complex {40, 50};
+    // complex* c5 = new complex {40, 50};
     // c5 is a pointer to type complex, c5 is on the stack
 
     cout<<"Printing out the value of the pointer c5: "<<c5<<endl;
