@@ -12,8 +12,8 @@ where  a: real part  b: imaginary part j = sqrt(-1) */
     1. Constructor: Function used to initial objects
     2. Destructor: Function that "clean up" tasks right BEFORE an object 
                    is removed from memory
-    3. Copy constructor (next lecture)
-    4. Copy assignment operator (next lecture)
+    3. Copy constructor 
+    4. Copy assignment operator
 */
 
 
@@ -136,18 +136,7 @@ int main(int argc, char const *argv[])
     c6 = c3 + *c5; // c6 = c3.operator+(*c5);
                    // c6 = operator+(c3, *c5);
     cout<<c6;
-    // c1.print();
-    // c3.print();
-    // c4.print();
-    // c5->print();
-    //cout<<c1;
-    // What is the output of the program?
-    // A. Random values for c1 and c2
-    // B. Compiler error (because there is a parameterized constructor,
-    //                    compiler doesn't provide a default)
-
-    // Destructor is called only 4 times  because the heap object (*c5)
-    // is not deleted automatically from memory
+ 
     delete c5; //deletes the object that c5 points to on the heap
     return 0;
 }
