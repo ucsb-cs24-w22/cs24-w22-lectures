@@ -80,11 +80,12 @@ public:
 
 
 void foo(complex c){ // pass by value, copy constructor is called
+    cout<<"In foo()"<<endl;
     
 }
 
 void bar(complex& c){ // pass by reference, no constructor is called
-    
+    cout<<"In bar()"<<endl;
 }
 
 
