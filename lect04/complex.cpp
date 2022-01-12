@@ -1,22 +1,5 @@
 //complex.cpp
-//Lecture 3 01/10
-/* Review basics of classes */
-
-/* Lecture 1: Abstract Data Types */
-/* Example: Datatype to represent complex numbers (could have been a struct)
-In general a complex number is of the form: a + j*b, 
-where  a: real part  b: imaginary part j = sqrt(-1) */
-/* complex c1; c1 is an object */
-
-/* Lectures 2 and 3: Big 4: Special function of any class, 
-                     C++ provides some default implementations */
-/*
-    1. Constructor: Function used to initial objects
-    2. Destructor: Function that "clean up" tasks right BEFORE an object 
-                   is removed from memory
-    3. Copy constructor 
-    4. Copy assignment operator
-*/
+//Lecture 4: 01/12
 
 
 #include <iostream>
