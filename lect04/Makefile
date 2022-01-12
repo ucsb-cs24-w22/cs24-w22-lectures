@@ -1,8 +1,9 @@
 # Makefile
-all: complex
-	./complex
-complex:complex.cpp
-	g++ --std=c++11 -Wall complex.cpp -o complex
+all: myprog
+	./myprog
+
+myprog:complex.cpp complex.h myprog.cpp
+	g++ --std=c++11 -Wall complex.cpp myprog.cpp -o myprog
 
 clean:
-	rm complex
+	rm myprog
