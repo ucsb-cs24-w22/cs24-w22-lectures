@@ -13,7 +13,7 @@ struct Node{
 struct LinkedList{
     Node* head;
     Node* tail;
-}
+};
 
 // function that adds a node to the front of list
 // Precondition: @param head stores a valid linked list

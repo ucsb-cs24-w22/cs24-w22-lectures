@@ -5,11 +5,14 @@ using namespace std;
 
 
 Node* addToFrontOfList(Node* h, string value){
-    //Create a new node on the heap
-    Node* new_node = new Node {value, nullptr};
+    //Create a new node on the heap and link it to the first node.
+    Node* new_node = new Node {value, h};
+    // When we have an empty list, then h is nullptr.
+    // The single node in my list has its next pointer as nullptr
+    // as it should be
     
     // Make new node point to the existing first node
-     new_node->next = h;
+    // new_node->next = h;
      // h = new_node; redundant in this case
 
     // Return the new linked list
@@ -19,6 +22,7 @@ Node* addToFrontOfList(Node* h, string value){
 
 }
 
+//Precondition: head is a valid linked list
 void printList(Node* head){
     Node* tp = head;
     while(tp){ // tp is not nullptr
@@ -42,6 +46,19 @@ int main(int argc, char const *argv[])
         head = addToFrontOfList(head, elem);
         printList(head);
     }
+    // Question from office hours about how to create a node 
+    // whose next member points to itself and the implications of doing so.
+    
+    //Example of creating such a node on the stack
+    Node stack_node {"Jack", nullptr}; 
+    stack_node.next = &stack_node; 
+
+     //Example of creating such a node on the heap
+    Node* heap_node = new Node{"Jack", nullptr};
+    heap_node->next = heap_node;
+
+    //Implication: infinite loop when we call printList
+    printList(heap_node);
 
     return 0;
 }
