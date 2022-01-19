@@ -78,9 +78,12 @@ complex complex::operator+(complex& rhs){
 
 // overloaded the operator<< for complex class
 // non-member function
-void operator<<(ostream& cout, complex& c1){
+ostream& operator<<(ostream& out, complex& c1){
     //cout<<"Calling overloaded <<"<<endl;
     c1.print();
-
+    return out;
 }
+
+//cout<<c1;
+//opertaor<<(cout, c1)
 

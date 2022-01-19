@@ -25,4 +25,4 @@ public:
 
 };
 
-void operator<<(ostream& cout, complex& c1); //non-member related to complex class
+ostream& operator<<(ostream& cout, complex& c1); //non-member related to complex class

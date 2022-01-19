@@ -44,21 +44,38 @@ int main(int argc, char const *argv[])
     cout<<endl;
     cout<<"c3: "<<c3;
     cout<<endl;
-    cout<<"c4: "<<c4;
+    cout<<"c4: "<<c4; // cout<<c4;
     cout<<endl;
-    cout<<"c5: "<<*c5;
-    cout<<endl;
+    cout<<"c5: "<<*c5<<endl;
     
     cout<<"c6 = c1 + c3"<<endl;
     complex c6;
-    c6 = c1 + c3; // compiler translates the statement to c6 = operator+(c1, c2);
-    
-    cout<<"c6: "<<c6;
-    cout<<endl;
+    c6 = c1 + c2 + c3; // compiler translates the statement to c6 = operator+(c1, c2);
+                       // (1) operator+(c1, c3): non-member
+                       // (2) c1.operator+(c3); 
+    //c1 + c2 + c3
+    //c1.operator+(c2) + c3
+    //(c1.operator+(c2)).opertator+(c3)
+
+    //operator+(operator+(c1, c2), c3)  //non-member function case
+
+
+    cout<<"c6: "<<c6<<endl;
 
     complex c8 {10, 20};
 
     complex c7 {*c5} ; // calls copy constructor
+    
+    cout<<c1; // (1) operator<<(cout, c1); nonmember function with 2 parameters: first is ostream, second is complex
+              // (2) X cout.operator<<(c1); implementing << as a member function of complex will not work  
+
+    cout<<c1<<endl; //operator<<(cout, c1) << endl;
+                    // cout << endl;
+    cout<<endl;
+    //(cout<<c1)<<endl
+    //opertaor<<(cout, c1) << endl
+
+    //ostream myobj(cout);
 
     cout<<"c5: "<< *c5;
     cout<<endl;
