@@ -23,6 +23,7 @@ Node* addToFrontOfList(Node* h, string value){
 //Precondition: head is a valid linked list
 void printList(Node* head){
     Node* tp = head;
+    if(!head) cout<<"Empty list"<<endl;
     while(tp){ // tp is not nullptr
         cout<<tp->data;
         //fix the fence post problem
@@ -33,20 +34,49 @@ void printList(Node* head){
     cout<<endl;
 
 }
+//Pre-condition: head is a pointer to the first node in a linked list
+//Post-condition: It deletes all the nodes in the list from heap memory
+void clearList(Node* head){
+    if(!head) return; //if(head == nullptr) return;
+    clearList(head->next); // delete the rest of the list
+    delete head;
+
+}
+
+void addToFrontOfList(LinkedList*& list, string value){
+    list->head = addToFrontOfList(list->head, value);
+    if(!list->tail) {
+        list->tail = list->head;
+    }
+
+}
+
+void printList(LinkedList*& list){
+    if(!(list->head))cout<<"List is empty"<<endl;
+    printList(list->head);
+
+
+}
+
+void clearList(LinkedList*& list){
+    clearList(list->head);
+    list->head = list->tail = nullptr;
+}
 
 int main(int argc, char const *argv[])
 {
     string cs24_TAs[] = {"Lucas", "Nawel", "Bowen", "Jack", "April"}; 
-    //Simplest possible linked list
-    Node* head = nullptr; //empty linked list (no nodes) 
-                          // using nullptr instead of NULL
+    //Use linked list as a type
+    LinkedList* mylist = new LinkedList{nullptr, nullptr}; //empty linked list
     //C++11 shorthand (range-based for loop)
     for(string elem : cs24_TAs){
-        head = addToFrontOfList(head, elem);
-        printList(head);
+        head = addToFrontOfList(mylist, elem);
+        printList(mylist);
     }
-
-
+    //Memory leak, need to call clear
+    clearList(mylist);
+    head = nullptr;
+    printList(head);
 
 
     // Question from office hours about how to create a node 
