@@ -1,4 +1,6 @@
-//filename: linkedlist.h (modified version of the CS16 final exam code from warmup-lab)
+//filename: linkedlist.h - version 2
+//linked list with structs
+//Here we represented a linked list as its own struct type
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 

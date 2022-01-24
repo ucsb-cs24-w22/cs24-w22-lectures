@@ -1,8 +1,10 @@
-//linkedlist.cpp
+//linkedlist.cpp - version 1
 #include <iostream>
 #include "linkedlist.h"
 using namespace std;
 
+//In the version 1 of our implementation, we'll represent a 
+//linked list as just a pointer to the first node
 
 Node* addToFrontOfList(Node* h, string value){
     //Create a new node on the heap and link it to the first node.

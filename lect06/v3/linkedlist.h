@@ -1,4 +1,5 @@
-//filename: linkedlist.h (modified version of the CS16 final exam code from warmup-lab)
+//filename: linkedlist.h (version 3)
+//linkedlist with classes
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 

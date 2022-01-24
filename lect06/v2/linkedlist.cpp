@@ -1,4 +1,5 @@
-//linkedlist.cpp
+//linkedlist.cpp - VERSION 2
+//linked list with structs
 #include <iostream>
 #include "linkedlist.h"
 using namespace std;

@@ -1,4 +1,5 @@
-//linkedlist.cpp
+//linkedlist.cpp -version 3
+//linked list with classes
 #include <iostream>
 #include "linkedlist.h"
 using namespace std;

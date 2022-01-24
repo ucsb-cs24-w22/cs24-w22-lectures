@@ -1,4 +1,6 @@
-//filename: linkedlist.h (modified version of the CS16 final exam code from warmup-lab)
+//filename: linkedlist.h - version 1
+//In the version 1 of our implementation, we'll represent a 
+//linked list as just a pointer to the first node
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
