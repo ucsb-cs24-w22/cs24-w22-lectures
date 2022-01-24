@@ -3,8 +3,6 @@
 #include "linkedlist.h"
 using namespace std;
 
-
-
 string LinkedList::getHead() const{
     return "April";
 
@@ -21,6 +19,8 @@ void LinkedList::append(string value){
 
 }
 void LinkedList::clear(){
+    clearList(head);
+    head = tail = nullptr;
 
 }
 bool LinkedList::search(string value){
@@ -35,7 +35,7 @@ void LinkedList::print() const {
 }
 //cout<<ll;
 ostream& operator<<(ostream& out, LinkedList& ll){
-    ll.print();
+    ll.printList(ll.head);
     return out;
 
 }
