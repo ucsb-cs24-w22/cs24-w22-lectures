@@ -49,16 +49,16 @@ int main(int argc, char const *argv[])
     // Question from office hours about how to create a node 
     // whose next member points to itself and the implications of doing so.
     
-    //Example of creating such a node on the stack
-    Node stack_node {"Jack", nullptr}; 
-    stack_node.next = &stack_node; 
+    // //Example of creating such a node on the stack
+    // Node stack_node {"Jack", nullptr}; 
+    // stack_node.next = &stack_node; 
 
-     //Example of creating such a node on the heap
-    Node* heap_node = new Node{"Jack", nullptr};
-    heap_node->next = heap_node;
+    //  //Example of creating such a node on the heap
+    // Node* heap_node = new Node{"Jack", nullptr};
+    // heap_node->next = heap_node;
 
-    //Implication: infinite loop when we call printList
-    printList(heap_node);
+    // //Implication: infinite loop when we call printList
+    // printList(heap_node);
 
     return 0;
 }
