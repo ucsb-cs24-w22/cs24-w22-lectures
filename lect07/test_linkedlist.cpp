@@ -18,7 +18,6 @@ void test_copy_constructor(){
     cout<<"Expect to get Lucas, April"<<endl;
     mm.print();
 
-
 }
 
 
@@ -37,7 +36,7 @@ int main(int argc, char const *argv[])
     mylist.clear();
     cout<<mylist;
 
-    test_copy_constructor();
+   // test_copy_constructor();
     
     return 0;
 }
