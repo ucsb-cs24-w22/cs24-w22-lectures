@@ -18,6 +18,8 @@ void test_copy_constructor(){
     cout<<"Expect to get Lucas, April"<<endl;
     mm.print();
 
+    //Default copy constructor
+
 }
 
 
@@ -32,9 +34,31 @@ int main(int argc, char const *argv[])
         mylist.prepend(elem);
         cout<<mylist;
     }
-    //Memory leak, need to call clear
-    mylist.clear();
-    cout<<mylist;
-    
+    LinkedList mylist2;
+    mylist2 = mylist; //call the copy assignment function
+    //mylist2.operator=(mylist);
+
+    //Segmentation fault: Program crashes unexpectedly
+    //trying access some invalid memory location
+    //(1) location exists but program doesn't have access permission
+    //(2) location that does not exist
+
+    //Forcing some segmentation faults
+    //(1) Dereferencing a null pointer
+    int* p=nullptr;
+    cout<<p<<endl;  //Okay 
+    //cout<<*p<<endl; //Segmentation fault
+
+    //(2) Out of bound array access - may result in a segfault
+    //(3) Double delete 
+    p = new int {10};
+    delete p;
+    p = nullptr;
+    delete p; //delete on a nullptr is okay
+
+    //(4) Dereferencing a bad pointer 
+
+    test_copy_constructor();
+
     return 0;
 }
