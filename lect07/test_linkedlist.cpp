@@ -35,8 +35,6 @@ int main(int argc, char const *argv[])
     //Memory leak, need to call clear
     mylist.clear();
     cout<<mylist;
-
-   // test_copy_constructor();
     
     return 0;
 }

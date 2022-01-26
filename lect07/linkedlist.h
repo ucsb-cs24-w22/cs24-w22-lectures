@@ -10,7 +10,6 @@ class LinkedList{
     public:
         //What are the operations on a linked list
         LinkedList():head(nullptr), tail(nullptr){}
-        ~LinkedList(){clear(); head = tail = nullptr;}
         string getHead() const;
         void prepend(string value);
         void append(string value);
