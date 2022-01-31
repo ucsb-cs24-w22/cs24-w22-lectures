@@ -1,4 +1,5 @@
 //bst.cpp
+//BST ADT
 #include <iostream>
 using namespace std;
 
