@@ -10,7 +10,7 @@ class bst{
       int min() const;
       int max() const;
       int successor(int value) const;
-      bool deleteNode(int value);
+      bool remove(int value);
       void printInOrder() const;
    private:
       class bstNode{
