@@ -1,0 +1,11 @@
+Command to run valgrind
+valgrind --leak-check=full ./bst
+Replace ./bst with your executable.
+
+Make sure you compile your code with the -g option. See the Makefile in this directory as an example.
+
+To run gdb
+gdb ./bst
+gdb commands
+r: runs your code within gdb
+bt: backtrace displays the contents of the stack. Usually good to trace which function calls led to a segfault.

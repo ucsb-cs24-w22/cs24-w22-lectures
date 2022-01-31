@@ -4,6 +4,15 @@
 #include "linkedlist.h"
 using namespace std;
 
+void test_append(){
+    cout<<"Testing append"<<endl;
+    LinkedList ll; //empty linked 
+    ll.prepend("April");
+    ll.prepend("Lucas");
+    ll.print();
+    //Memory leak if the destructor is not overloaded
+}
+
 void test_copy_constructor(){
     // series of test cases to test the copy constructor
     cout<<"Testing copy constructor"<<endl;
