@@ -5,12 +5,18 @@ using namespace std;
 
 class bst{
    public:
+      bst():root(nullptr){}
+      ~bst(){
+         clear();
+      }
       bool insert(int value); // return false if the value already exists
+      bool remove(int value);
+      void clear(); //deletes all the nodes in the BST
       bool search(int value) const;
       int min() const;
       int max() const;
       int successor(int value) const;
-      bool remove(int value);
+      int predecessor(int value) const;   
       void printInOrder() const;
    private:
       class bstNode{
