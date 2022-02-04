@@ -39,6 +39,10 @@ bool bst::insert(int value){
 void bst::printInOrder() const{
 }
 
+void bst::clear(){
+
+}
+
 
 int main(){
    return 0;
