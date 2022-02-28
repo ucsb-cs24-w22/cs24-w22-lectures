@@ -46,6 +46,14 @@ int main(int argc, char const *argv[])
 
     s.erase(10);
     printBST(s);
+    it = s.find(45);
+    //cout<<"Searching for 45: "<<*it<<endl;
+    if(it == s.end()){ //check to see if key was not found
+        cout<<"45 is not in the BST"<<endl;
+    }else{
+        cout<<"45 is in the BST"<<endl;
+    }
+    //it = s.end();
 
     it = s.find(40);
     s.erase(it);
