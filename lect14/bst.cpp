@@ -85,18 +85,20 @@ void BST<T>::printBreadthFirst() const{
 	queue<Node*> q; // Storing node pointers in the queue
 	if(!root) return;
 	q.push(root);
-	while(!q.empty()){
-		Node* fr = q.front();
-		cout<<fr->info<<" ";
-		if(fr->left)
-			q.push(fr->left); // insert the left child
-		if(fr->right) 
+	//Everything before the while loop is O(1)
+	while(!q.empty()){ //Exactly N - N is number of nodes in the BST
+		Node* fr = q.front(); //O(1)
+		cout<<fr->info<<" "; //O(1)
+		if(fr->left)//O(1)
+			q.push(fr->left); // insert the left child //O(1)
+		if(fr->right) //O(1)
 			q.push(fr->right); //insert the right child
-		q.pop();
+		q.pop();//O(1)
 	}
 
 	cout<<endl;
-
+//O(1) + N* O(1)
+//O(N)
 
 }
 
