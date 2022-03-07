@@ -23,6 +23,8 @@ int main(int argc, char const *argv[])
     //priority_queue<int> pq; //max heap
     //priority_queue<int, vector<int>, std::less<int>> pq;  //"max-heap"
     priority_queue<int, vector<int>, myFunctor<int>> pq; //min-heap
+
+    //cout<<pq.top()<<endl; top on a empty priority queue will seg fault
     myFunctor<int> comp;
     cout<<"Comparing 10 and 20: "<<std::boolalpha<<comp(10, 20);
     //For PQ, if comp(a, b) is false, 
