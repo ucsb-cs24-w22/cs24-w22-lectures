@@ -18,7 +18,14 @@ class BST {
     bool insert(T value);     // insert value; return false if duplicate
     bool contains(T value) const;  // true if value is in tree
     void printPreOrder() const; // prints tree data pre-order to cout
-
+    BST(const BST<T> & source){ //default C++ : shallow copy
+        root = source.root;
+    }
+    BST(const BST<T> & source){ //deep copy 
+        root = nullptr;
+        if(!source.root) return;
+        PreOrderInsert(source.root);
+    }
  private:
 
     struct Node {
@@ -36,6 +43,13 @@ class BST {
     void clear(Node *n); // for destructor
     bool insert(T value, Node *n); // note overloading names for simplicity
     void printPreOrder(Node *n) const;
+    void PreOrderInsert(Node* n){
+        if(!n) return;
+        this->insert(n->info);
+        PreOrderInsert(n->left);
+        PreOrderInsert(n->right);
+
+    }
     
 };
 
